@@ -243,7 +243,6 @@ for (var q = 0; q < navAnchors.length; q++) {
   tl.from("header", { y: -70, opacity: 0, duration: 0.7, clearProps: "transform,opacity" })
     .from("nav a", { y: -12, opacity: 0, stagger: 0.08, duration: 0.4, clearProps: "transform,opacity" }, "-=0.3")
     .from(".hud > *", { opacity: 0, stagger: 0.1, duration: 0.5 }, "-=0.2")
-    .from("h1", { y: 50, opacity: 0, duration: 0.9 }, "-=0.1")
     .to(".p2 i", { width: "4%", duration: 2.4, ease: "power2.in" }, "-=0.3")
     .fromTo(".stamp", { scale: 2.4, opacity: 0 },
             { scale: 1, opacity: 1, duration: 0.5, ease: "back.out(2.2)" })
