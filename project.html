@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rage Quit Lounge</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Bungee&family=Chakra+Petch:wght@400;500;700&display=swap"
+    />
+    <link rel="stylesheet" href="project.css" />
+  </head>
+  <body>
+    <div class="bg" aria-hidden="true">
+      <div
+        class="bg-slide"
+        data-game="Tekken 8"
+        style="
+          background-color: #1b1c24;
+          background-image: url(&quot;BryanFury.jpg&quot;);
+        "
+      ></div>
+      <div
+        class="bg-slide"
+        data-game="Tekken 8"
+        style="
+          background-color: #1b1c24;
+          background-image: url(&quot;TekkenAnimatedImage.jpg&quot;);
+        "
+      ></div>
+      <div
+        class="bg-slide"
+        data-game="Tekken 8"
+        style="
+          background-color: #1b1c24;
+          background-image: url(&quot;HeihachiMishima.jpg&quot;);
+        "
+      ></div>
+      <div
+        class="bg-slide"
+        data-game="Tekken 8"
+        style="
+          background-color: #1b1c24;
+          background-image: url(&quot;JinxKazuya.jpg&quot;);
+        "
+      ></div>
+      <div
+        class="bg-slide"
+        data-game="FC 26"
+        style="
+          background-color: #141823;
+          background-image: url(&quot;FC\ 26.jpg&quot;);
+        "
+      ></div>
+      <div
+        class="bg-slide"
+        data-game="GTA VI"
+        style="
+          background-color: #472e34;
+          background-image: url(&quot;Jason.jpg&quot;);
+        "
+      ></div>
+      <div
+        class="bg-slide"
+        data-game="Tekken 8"
+        style="
+          background-color: #2d2a38;
+          background-image: url(&quot;Yoshimitsu.jpg&quot;);
+        "
+      ></div>
+      <div
+        class="bg-slide"
+        data-game="FC 26"
+        style="
+          background-color: #1c1f21;
+          background-image: url(&quot;FC\ 26\ player.jpg&quot;);
+        "
+      ></div>
+      <div
+        class="bg-slide"
+        data-game="GTA VI"
+        style="
+          background-color: #42464b;
+          background-image: url(&quot;GTA\ VI\ speed\ boat.jpg&quot;);
+        "
+      ></div>
+      <div
+        class="bg-slide"
+        data-game="Tekken 8"
+        style="
+          background-color: #25191b;
+          background-image: url(&quot;Eddy.jpg&quot;);
+        "
+      ></div>
+    </div>
+    <header>
+      <div class="wrap">
+        <div class="logo">Rage Quit Lounge</div>
+        <nav>
+          <a href="#stations">Stations</a>
+          <a href="#games">Games</a>
+          <a href="#tournaments">Tournaments</a>
+          <a href="#help">Help</a>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div class="wrap hero">
+        <div class="hud">
+          <div class="who">You</div>
+          <div class="bar p1"><i></i></div>
+          <div class="vs">VS</div>
+          <div class="bar p2"><i></i></div>
+          <div class="who">Opponent</div>
+        </div>
+        <h1>Play Hard.<br /><span>Rage Quit</span>here.</h1>
+        <div class="stamp">K.O.</div>
+        <p class="sub">
+          Gaming PCs , Ps5 consoles and a private VIP room. Check prices, pick
+          your station and book in under a minute.
+        </p>
+        <a class="btn" href="#book">Book a slot</a>
+      </div>
+      <section>
+        <div class="wrap">
+          <h2>Inside the lounge</h2>
+          <p class="lead">A look at the zones you can book</p>
+          <div class="gal">
+            <img src="GamingPcs.jpg" alt="Gaming PC zone" />
+            <img src="Tournament.jpg" alt="Gaming PC zone" />
+            <img src="GamingLounge.jpg" alt="Gaming PC zone" />
+            <img src="Lounge.jpg" alt="Gaming PC zone" />
+          </div>
+        </div>
+      </section>
+      <section id="stations">
+        <div class="wrap">
+          <h2>Pick your station</h2>
+          <p class="lead">Tap a station to see the price update below</p>
+          <div class="picks">
+            <button
+              class="pick"
+              data-price="400"
+              data-name="Gaming PC"
+              aria-pressed="true"
+            >
+              <b>Gaming PC</b>
+              <span class="rate">Rs 400</span>
+              <small
+                >per hour. High-refresh monitor, mechanical keyboard.</small
+              >
+            </button>
+            <button
+              class="pick"
+              data-price="700"
+              data-name="PS5"
+              aria-pressed="false"
+            >
+              <b>PS5</b>
+              <span class="rate">Rs 700</span>
+              <small>per hour. Two controllers, big screens.</small>
+            </button>
+            <button
+              class="pick"
+              data-price="1200"
+              data-name="VIP Room"
+              aria-pressed="false"
+            >
+              <b>VIP Room</b>
+              <span class="rate">Rs 1200</span>
+              <small>per hour. Private room for up to 6 friends.</small>
+            </button>
+          </div>
+          <div class="fields">
+            <label
+              >Name<input id="n" type="text" placeholder="Your name"
+            /></label>
+            <label
+              >Phone<input id="p" type="text" placeholder="0333-3333333"
+            /></label>
+            <label>Date<input id="d" type="date" /></label>
+            <label>Time<select id="t"></select></label>
+          </div>
+          <div class="err" id="err"></div>
+          <div class="book" id="book">
+            <div class="stepper">
+              <button id="minus" aria-label="Fewer hours">&minus;</button>
+              <div class="hrs"><span id="h">1</span>hr</div>
+              <button id="plus" aria-label="More hours">+</button>
+            </div>
+            <div>
+              <div class="total-label">
+                Total for <span id="sn">Gaming PC</span>
+              </div>
+              <div class="total" id="tot">Rs 300</div>
+              <div class="off" id="off">
+                Book 3 hours or more for 10% discount
+              </div>
+            </div>
+            <a class="btn" id="wa" href="#" target="_blank" rel="noopener"
+              >Send on Whatsapp</a
+            >
+          </div>
+        </div>
+      </section>
+      <section id="games">
+        <div class="wrap">
+          <h2>What you can play</h2>
+          <p class="lead">Updated every month.</p>
+          <div class="filters">
+            <button data-f="all" aria-pressed="true">All</button>
+            <button data-f="PC" aria-pressed="false">PC</button>
+            <button data-f="PS5" aria-pressed="false">PS5</button>
+          </div>
+          <div class="scroll">
+            <table id="gt">
+              <tr>
+                <th>Game</th>
+                <th>Platform</th>
+                <th>Players</th>
+              </tr>
+              <tr data-p="PS5">
+                <td>Tekken 8</td>
+                <td>PS5</td>
+                <td>1 to 2</td>
+              </tr>
+              <tr data-p="PS5">
+                <td>FC 25</td>
+                <td>PS5</td>
+                <td>1 to 4</td>
+              </tr>
+              <tr data-p="PS5">
+                <td>GTA VI</td>
+                <td>PS5</td>
+                <td>1</td>
+              </tr>
+              <tr data-p="PS5">
+                <td>Mortal Kombat</td>
+                <td>PS5</td>
+                <td>1 to 2</td>
+              </tr>
+              <tr data-p="PC">
+                <td>Valorant</td>
+                <td>PC</td>
+                <td>1 to 5</td>
+              </tr>
+              <tr data-p="PC">
+                <td>Counter-Strike 2</td>
+                <td>PC</td>
+                <td>1 to 5</td>
+              </tr>
+              <tr data-p="PC">
+                <td>Dota 2</td>
+                <td>PC</td>
+                <td>1 to 5</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </section>
+      <section id="tournaments">
+        <div class="wrap">
+          <h2>Tournaments</h2>
+          <p class="lead">Entry fees go into the prize pool</p>
+          <div class="scroll">
+            <table>
+              <tr>
+                <th>Date</th>
+                <th>Entry</th>
+                <th>Prize</th>
+                <th></th>
+              </tr>
+              <tr class="next">
+                <td>20 Nov</td>
+                <td>Tekken 8<span class="tag">Next</span></td>
+                <td>Rs 500</td>
+                <td>Rs 10,000</td>
+                <td>
+                  <a
+                    class="btn small"
+                    target="_blank"
+                    rel="noopener"
+                    href="https://wa.me/923100104673?text=Register%20me%20for%20Tekken%208%20on%2020%20Nov"
+                    >Register</a
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td>27 Nov</td>
+                <td>FC 25</td>
+                <td>Rs 300</td>
+                <td>Rs 5,000</td>
+                <td>
+                  <a
+                    class="btn small"
+                    target="_blank"
+                    rel="noopener"
+                    href="https://wa.me/923100104673?text=Register%20me%20for%20FC%2025%20on%2027%20Nov"
+                    >Register</a
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td>4 Dec</td>
+                <td>Valornt</td>
+                <td>Rs 400</td>
+                <td>R 8,000</td>
+                <td>
+                  <a
+                    class="btn small"
+                    target="_blank"
+                    rel="noopener"
+                    href="https://wa.me/923100104673?text=Register%20me%20for%20Valorant%20on%204%20Dec"
+                    >Register</a
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td>11 Dec</td>
+                <td>Counter Strike 2</td>
+                <td>Rs 400</td>
+                <td>Rs 8,000</td>
+                <td>
+                  <a
+                    class="btn small"
+                    target="_blank"
+                    rel="noopener"
+                    href="https://wa.me/923100104673?text=Register%20me%20for%20Counter-Strike%202%20on%2011%20Dec"
+                    >Register</a
+                  >
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </section>
+      <section id="help">
+        <div class="wrap">
+          <div class="two">
+            <div>
+              <h2>Lounge Rules</h2>
+              <ul class="rules">
+                <li>Be kind to the controllers</li>
+                <li>No food near the keyboards</li>
+                <li>Arrive 10 minutes early</li>
+                <li>Rage quitting is allowed. Breaking things is not.</li>
+                <li>Leave your station clean</li>
+              </ul>
+            </div>
+            <div>
+              <h2>Opening Hours</h2>
+              <table class="hours">
+                <tr>
+                  <th scope="row">Mon to Thu</th>
+                  <td>12 PM &ndash; 12 AM</td>
+                </tr>
+                <tr>
+                  <th scope="row">Fri to Sun</th>
+                  <td>12 PM &ndash; 2 AM</td>
+                </tr>
+              </table>
+              <p class="maps">
+                <a
+                  class="link"
+                  target="_blank"
+                  rel="noopener"
+                  href="https://www.google.com/maps/place/The+Glitch+and+Grill/@24.9205425,67.0868847,17z/data=!4m6!3m5!1s0x3eb33f005bac1f73:0x4e131d9a0bad6ab8!8m2!3d24.9205425!4d67.0868847!16s%2Fg%2F11yxqnx175"
+                  >See us on Google Maps</a
+                >
+              </p>
+            </div>
+          </div>
+          <h2 class="faq-title">Questions</h2>
+          <details>
+            <summary>Do I need to need to pay in advance</summary>
+            <p>No. Pay at the counter when you arrive(cash/online)</p>
+          </details>
+          <details>
+            <summary>
+              Can I enter the tournament without booking the station
+            </summary>
+            <p>
+              Yes. Tap REgister next to the tournament and send us the message
+            </p>
+          </details>
+          <details>
+            <summary>What if I arrive late?</summary>
+            <p>We hold your slot for 15 minutes</p>
+          </details>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="wrap">
+        Rage Quit Lounge, Karachi. Open 12 PM to 2 AM. &copy;2026
+      </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="project.js"></script>
+  </body>
+</html>
